@@ -13,7 +13,8 @@ namespace hada_p1
 
             do
             {
-                Console.WriteLine("Introduce la unidad de origen (segundos/minutos):");
+                // Actualizamos el mensaje para incluir "horas"
+                Console.WriteLine("Introduce la unidad de origen (segundos/minutos/horas):");
                 unidad = Console.ReadLine().ToLower();
 
                 Console.WriteLine("Introduce la cantidad:");
@@ -29,6 +30,13 @@ namespace hada_p1
                     resultado = HadaP1.Minutes2Seconds(cantidad);
                     Console.WriteLine(cantidad + " minutos son " + resultado + " segundos");
                 }
+                // --- NUEVA OPCIÓN AÑADIDA AQUÍ ---
+                else if (unidad == "horas")
+                {
+                    resultado = HadaP1.Hours2Minutes(cantidad);
+                    Console.WriteLine(cantidad + " horas son " + resultado + " minutos");
+                }
+                // ---------------------------------
                 else
                 {
                     Console.WriteLine("Unidad no válida");

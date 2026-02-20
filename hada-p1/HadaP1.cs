@@ -34,5 +34,15 @@ namespace hada_p1
         {
             return m * 60;
         }
+
+        /// <summary>
+        /// Convierte una cantidad de horas a su equivalente en minutos.
+        /// </summary>
+        /// <param name="h">La cantidad de horas a convertir (double).</param>
+        /// <returns>La cantidad de minutos resultante (double).</returns>
+        public static double Hours2Minutes(double h)
+        {
+            return h * 60;
+        }
     }
 }
